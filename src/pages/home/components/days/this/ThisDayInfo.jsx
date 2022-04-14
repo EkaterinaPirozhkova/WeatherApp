@@ -7,7 +7,7 @@ const ThisDayInfo = (props) => {
             <div className={classes.thisDayInfo}>
                 <div className={classes.item}>
                     <p>Температура: {Math.round(props.temp)}°</p>
-                    <p>Ощущается как: {props.feels_like}</p>
+                    <p>Ощущается как: {Math.round(props.feels_like)}°</p>
                     <p>Давление: {props.pressure}</p>
                     <p>Влажность: {props.humidity}</p>
                 </div>

@@ -12,9 +12,10 @@ const Card = ({day}: Props) => {
         {day.data &&
             <div className={classes.card}>
                 <div className={classes.day}>{day.day}</div>
-                <div className={classes.data}>{day.data}</div>
+                <div className={classes.data}>{(day.data)}</div>
                 <div className={classes.img}>
-                    <SharedSvgSelector id={day.icon}/></div>
+                    <SharedSvgSelector id={day.icon_id}/>
+                </div>
                 <div className={classes.temp_day}>{Math.round(day.temp_day)}</div>
                 <div className={classes.temp_night}>{Math.round(day.temp_night)}</div>
                 <div className={classes.info}>{day.info}</div>

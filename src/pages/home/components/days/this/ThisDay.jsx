@@ -1,29 +1,34 @@
 import React from "react";
-import classes from './Weather.module.css';
+import classes from './ThisDay.module.css';
+import SharedSvgSelector from "../../../../../assets/icons/shared/SharedSvgSelector";
+import Days from "../next/Days";
 
-const Weather = props => (
-    <div>
-        {props.city &&
-           /* <div>
-                <p>Местоположение: {props.city}, {props.country}</p>
-                <p>Температура: {props.temp}</p>
-                <p>Ощущается как: {props.feels_like}</p>
-                <p>Давление: {props.pressure}</p>
-                <p>Влажность: {props.humidity}</p>
-            </div>*/
-            <header className={classes.day}>
-                <div className={classes.top}>
-                    <div className={classes.curTemp}>{props.temp}°</div>
-                    <div className={classes.thisDay}>Сегодня</div>
-                </div>
-                <div className={classes.button}>
-                    <div className={classes.thisTime}>Время: <span>21:54</span></div>
-                    <div className={classes.city}>Город: <span>{props.city}</span></div>
-                </div>
-            </header>
-        }
-        <p>{props.error}</p>
-    </div>
-);
+const ThisDay = props => {
+    return (
+        <div>
+            <div>
+                {props.city &&
+                    <div className={classes.day}>
+                        <div className={classes.top}>
+                            <div className={classes.topWrapper}>
+                                <div className={classes.curTemp}>{Math.round(props.temp)}°</div>
+                                <div className={classes.thisDay}>Сегодня</div>
+                            </div>
+                            <SharedSvgSelector id={'sun'}/>
+                        </div>
+                        <div className={classes.button}>
+                            <div className={classes.thisTime}>Время: <span>{props.time}</span></div>
+                            <div className={classes.city}>Город: <span>{props.city}</span></div>
+                        </div>
 
-export default Weather;
+                    </div>
+
+                }
+                <p>{props.error}</p>
+            </div>
+
+        </div>
+    );
+}
+
+export default ThisDay;

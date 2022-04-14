@@ -1,0 +1,47 @@
+.days {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 97%;
+    left: 30px;
+    background: #ffffff;
+    box-shadow: 2px 5px 25px -20px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+}
+
+.day {
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+.data {
+    margin-bottom: 17px;
+    font-size: 14px;
+    color: #939cb0;
+}
+
+.img {
+    margin-bottom: 12px;
+}
+
+.temp_day {
+    font-size: 18px;
+}
+
+.temp_night {
+    font-size: 13px;
+    color: #939cb0;
+    margin-bottom: 6px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(71, 147, 255, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    width: 149px;
+    transition: 0.3s;
+    cursor: pointer;
+}

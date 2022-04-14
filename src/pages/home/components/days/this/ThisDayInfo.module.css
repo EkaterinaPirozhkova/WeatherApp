@@ -1,3 +1,22 @@
-.home{
-font-size: 30px;
+.thisDayInfo {
+    padding: 10px;
+    max-width: 630px;
+    height: 260px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    position: relative;
+    left: 502px;
+    top: -270px;
+}
+
+.item {
+    color: #000000;
+    font-size: 25px;
+}
+
+.days {
+    top: -300px;
+    button: 300px;
 }

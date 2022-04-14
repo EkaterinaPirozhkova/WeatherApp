@@ -1,3 +1,47 @@
-.home{
-font-size: 30px;
+.day {
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    height: 260px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+svg {
+    width: 200px;
+    height: 200px;
+}
+
+.curTemp {
+    font-size: 96px;
+    font-weight: 500;
+    color: #528fef;;
+}
+
+.thisDay {
+    font-size: 40px;
+    color: #000;
+}
+
+.thisTime {
+    color: #939cb0;
+    font-size: 25px;
+}
+
+.city {
+    color: #939cb0;
+    font-size: 25px;
 }

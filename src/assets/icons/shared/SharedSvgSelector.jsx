@@ -13,16 +13,20 @@ const SharedSvgSelector = ({id}: Props) => {
     switch (id) {
         case 'logo':
             return (<img src={logo} alt='logo'/>)
-        case 'sun':
+        case 'облачно с прояснениями':
+            return (<img src={logo} alt='logo'/>)
+        case 'Clouds':
+            return (<img src={logo} alt='logo'/>)
+        case 'Sun':
             return (<img src={sun} alt='sun'/>)
         case 'rain':
             return (<img src={rain} alt='rain'/>)
-        case 'rainbow':
+        case 'облачно':
             return (<img src={rainbow} alt='rainbow'/>)
-        case 'storm':
+        case 'пасмурно':
             return (<img src={storm} alt='storm'/>)
         default:
-            return null;
+            return (<img src={rainbow} alt='rainbow'/>);
     }
 }
 export default SharedSvgSelector;

@@ -12,55 +12,24 @@ export interface Day {
 }
 
 const Days = (props) => {
-    //this.setState(props.days)
-    const days: Day[] = [
-        {
-            day: 'Сегодня',
-            data: 'Дата',
-            icon_id: 'sun',
-            temp_day: '+18',
-            temp_night: '+15',
-            info: 'Облачно',
-        },
-        {
-            day: 'Завтра',
-            data: 'Дата',
-            icon_id: 'rainbow',
-            temp_day: '+18',
-            temp_night: '+15',
-            info: 'Облачно',
-        },
-        {
-            day: 'Ср',
-            data: 'Дата',
-            icon_id: 'storm',
-            temp_day: '+18',
-            temp_night: '+15',
-            info: 'Облачно',
-        },
-        {
-            day: 'Чт',
-            data: 'Дата',
-            icon_id: 'rain',
-            temp_day: '+18',
-            temp_night: '+15',
-            info: 'Облачно',
-        },
-        {
-            day: 'Пт',
-            data: 'Дата',
-            icon_id: 'sun',
-            temp_day: '+18',
-            temp_night: '+15',
-            info: 'Облачно',
-        },
-    ];
+    const daysArr: Day[5] = [];
+    if (props.days !== undefined) {
+        props.days.map(item =>{
+            console.log(item);
+            daysArr.push({
+                data: item.dt_txt,
+                icon_id:item.weather[0].main,
+                temp_day:item.main.temp_max,
+                temp_night:item.main.temp_min,
+                info:item.weather[0].description
+            })
+        })
+    }
     return (< div className={classes.days}>
-            {days.map((day: Day) => (
+            {daysArr.map((day: Day)=> (
                 <Card day={day}/>
             ))}
         < /div>
     );
 };
-
 export default Days;

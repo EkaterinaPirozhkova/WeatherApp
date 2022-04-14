@@ -8,14 +8,18 @@ interface Props {
 }
 
 const Card = ({day}: Props) => {
-        return <div className={classes.card}>
-            <div className={classes.day}>{day.day}</div>
-            <div className={classes.data}>{day.data}</div>
-            <div className={classes.img}>
-                <SharedSvgSelector id={day.icon_id}/></div>
-            <div className={classes.temp_day}>{day.temp_day}</div>
-            <div className={classes.temp_night}>{day.temp_night}</div>
-            <div className={classes.info}>{day.info}</div>
-        </div>
+    return (<div>
+        {day.data &&
+            <div className={classes.card}>
+                <div className={classes.day}>{day.day}</div>
+                <div className={classes.data}>{day.data}</div>
+                <div className={classes.img}>
+                    <SharedSvgSelector id={day.icon}/></div>
+                <div className={classes.temp_day}>{Math.round(day.temp_day)}</div>
+                <div className={classes.temp_night}>{Math.round(day.temp_night)}</div>
+                <div className={classes.info}>{day.info}</div>
+            </div>
+        }
+    </div>)
 }
 export default Card;
